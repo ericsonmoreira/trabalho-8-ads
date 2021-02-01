@@ -15,7 +15,7 @@ const simulation = (total: number) => {
   // número PI gerado com aproximação de 6 casas decimais
   const pi = Number(((countInsideCircle(points) / total) * 4).toFixed(6));
 
-  const erro = pi - Math.PI;
+  const erro = Math.abs(pi - Math.PI);
 
   console.table({pi, erro, total});
 };
